@@ -10,11 +10,13 @@ const ExpressError = require('./utilities/ExpressError');
 const ejsMate = require('ejs-mate')
 const { campgroundSchema } = require('./schemas.js');
 
-mongoose.connect("mongodb://localhost:27017/yelp-camp", {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true
-});
+mongoose.connect("mongodb+srv://Qhub:Qhub@freeclusterforqhub.yssni.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+
+// mongoose.connect("mongodb://localhost:27017/yelp-camp", {
+//     useNewUrlParser: true,
+//     useCreateIndex: true,
+//     useUnifiedTopology: true
+// });
 
 const db = mongoose.connection;
 db.on('error', console.error.bind('console', 'Connection error:'))
