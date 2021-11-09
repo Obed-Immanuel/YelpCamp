@@ -103,6 +103,8 @@ app.use((err, req, res, next) => {
 //     res.send(camp)
 // })
 
-app.listen(3000, () => {
+const port = process.env.PORT
+
+app.listen(port || 3000, () => {
     console.log("LISTENING ON PORT 3000");
 })
